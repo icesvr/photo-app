@@ -1,0 +1,14 @@
+
+<h2 mat-dialog-tittle>Subir Imagen</h2>
+<mat-dialog-content>
+    <form [formGroup]="form" (ngSubmit)="onSaveForm()">
+        <input type="file"   name="image" (change)="onFileSelected($event)">
+        <input type="text"  formControlName="description" name="description">
+        
+
+        <mat-dialog-actions>
+            <button mat-button mat-dialog-close="true" type="submit" value="Subir">Subir</button>
+        </mat-dialog-actions>
+    </form>
+
+</mat-dialog-content>
